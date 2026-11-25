@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 270px; font-family: system-ui, sans-serif; margin: 0; padding: 14px; color: #1c1c1c; }
+  h1 { font-size: 15px; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .on { background: #1a7f4b; } .off { background: #8a8a8a; }
+  #toggle { width: 100%; padding: 9px; font-size: 14px; border: 0; border-radius: 8px; cursor: pointer; color: #fff; }
+  #toggle.on { background: #b3261e; } #toggle.off { background: #1a7f4b; }
+  .stats { margin: 12px 0; font-size: 12.5px; color: #444; line-height: 1.7; }
+  .stats b { color: #1c1c1c; }
+  a { font-size: 12.5px; color: #1456c7; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  #err { color: #b3261e; font-size: 12px; margin-top: 8px; display: none; }
+</style>
+</head>
+<body>
+  <h1><span id="dot" class="dot off"></span> Aman Web Filter</h1>
+  <button id="toggle" class="off">...</button>
+  <div class="stats">
+    Built-in list: <b id="builtin">90,304</b> domains (sets active: <b id="sets">-</b>)<br>
+    Your blocked list: <b id="cblocked">0</b> &middot; allowed: <b id="callowed">0</b><br>
+    Blocked this session: <b id="session">0</b>
+  </div>
+  <a href="#" id="openOptions">Manage your lists</a>
+  <div id="err"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
