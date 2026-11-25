@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aman Web Filter - Your lists</title>
+<style>
+  body { max-width: 620px; margin: 24px auto; font-family: system-ui, sans-serif; padding: 0 16px; color: #1c1c1c; }
+  h1 { font-size: 18px; } h2 { font-size: 15px; margin-top: 26px; }
+  p.note { color: #555; font-size: 13px; line-height: 1.5; }
+  .row { display: flex; gap: 8px; margin: 8px 0 4px; }
+  input[type=text] { flex: 1; padding: 8px; font-size: 14px; border: 1px solid #bbb; border-radius: 6px; }
+  button { padding: 8px 14px; font-size: 13.5px; border: 0; border-radius: 6px; cursor: pointer; background: #1456c7; color: #fff; }
+  ul { list-style: none; padding: 0; margin: 8px 0; max-height: 180px; overflow-y: auto; }
+  li { display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; border-bottom: 1px solid #eee; font-size: 13.5px; }
+  li button { background: none; color: #b3261e; padding: 2px 8px; font-size: 13px; }
+  #msg { font-size: 13px; margin-top: 6px; min-height: 18px; }
+  .ok { color: #1a7f4b; } .bad { color: #b3261e; }
+</style>
+</head>
+<body>
+  <h1>Aman Web Filter</h1>
+  <p class="note">The built-in list (90,304 domains, from the StevenBlack/hosts project, MIT license) ships in 4 rule sets: a 28,000-domain core that is always on while filtering is enabled, plus 3 extended sets that Chrome activates when its rule budget allows - the toolbar popup shows how many sets are active. Here you manage your own additions. <b>Allowed</b> always wins over blocked. Everything is stored only in this browser.</p>
+  <h2>Block a site</h2>
+  <div class="row"><input id="blockInput" type="text" placeholder="example.com"><button id="addBlock">Block</button></div>
+  <ul id="blockList"></ul>
+  <h2>Allow a site</h2>
+  <div class="row"><input id="allowInput" type="text" placeholder="example.org"><button id="addAllow">Allow</button></div>
+  <ul id="allowList"></ul>
+  <div id="msg"></div>
+  <script src="options.js"></script>
+</body>
+</html>
