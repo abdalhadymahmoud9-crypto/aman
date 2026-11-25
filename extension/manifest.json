@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Aman Web Filter",
+  "version": "1.0.0",
+  "description": "Personal, voluntary website filter. Blocks a built-in list plus your own custom list. You stay in control: pause or remove anytime.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Aman Web Filter"
+  },
+  "options_page": "options.html",
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "rules_1",
+        "enabled": true,
+        "path": "rules/rules_1.json"
+      },
+      {
+        "id": "rules_2",
+        "enabled": false,
+        "path": "rules/rules_2.json"
+      },
+      {
+        "id": "rules_3",
+        "enabled": false,
+        "path": "rules/rules_3.json"
+      },
+      {
+        "id": "rules_4",
+        "enabled": false,
+        "path": "rules/rules_4.json"
+      }
+    ]
+  }
+}
